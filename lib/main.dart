@@ -131,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ],
                     );
                   } else {
-                    if (!snapshot.data.isValid()) {
+                    //if (!snapshot.data.isValid() || snapshot.data.isExpired()) {
                       return FutureBuilder(
                         future: _oauth2Helper.getToken(),
                         builder: (ctx, snapshot) {
@@ -155,8 +155,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           );
                         },
                       );
-                    }
-                    print("Token is valid");
+                    //}
+                    /*print("Token is valid");
                     print("Access Token");
                     print(snapshot.data.accessToken);
                     print("Refresh Token");
@@ -174,7 +174,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           onPressed: logout,
                         ),
                       ],
-                    );
+                    );*/
                   }
                 }),
       ),
